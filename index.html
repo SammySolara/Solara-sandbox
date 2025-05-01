@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solara Payment Solutions provides innovative, secure, and cost-effective payment processing services to businesses worldwide. Discover solutions that help you grow your business today.">
+    <title>Solara Payments - Powering the Future of Payments, Today</title>
+    <link rel="stylesheet" href="https://9985eba3.solara-site-css-files.pages.dev/tailwind.min.css">
+    <link rel="stylesheet" href="https://9985eba3.solara-site-css-files.pages.dev/style.css">
+    <link rel="icon" href="./images/asset-7404x-8.webp" type="image/webp">
+    <script src="./main.js" defer></script>
+    <script src="https://kit.fontawesome.com/c0c8b0eec8.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./functions/auth.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" defer></script>
+</head>
+<body class="font-sans">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold flex items-center">
+                    <a href="./index.html" class="hover-lift-nav" alt="Scroll to top of page"><img src="./images/header-logo.webp" width="150px" alt="Solara Main Logo Header"></a>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="./solutions.html" class="text-gray-700 hover:text-solara-blue transition font-medium hover-lift-nav">Solutions</a>
+                <a href="#pricing" class="text-gray-700 hover:text-solara-blue transition font-medium hover-lift-nav">Pricing</a>
+                <a href="./commitment.html" class="text-gray-700 hover:text-solara-blue transition font-medium hover-lift-nav">Our Commitment</a>
+                <a href="./partnerships.html" class="text-gray-700 hover:text-solara-blue transition font-medium hover-lift-nav">Partnerships</a>
+                <a href="javascript:void(0);" onclick="toggleLoginModal()" class="bg-solara-blue text-white px-5 py-2 rounded-md font-medium hover:bg-solara-blue transition hover-lift-nav">
+                    <i class="fas fa-lock mr-2 text-sm"></i>Login
+                </a>
+                <a href="#cost-analysis" class="bg-solara-blue text-white px-5 py-2 rounded-md font-medium hover:bg-blue-600 transition hover-lift-nav">Free Cost Analysis</a>
+            </nav>
+            <button class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+<section class="hero-bg text-white py-28" style="background-image: linear-gradient(rgba(0, 0, 0, 0.713), rgba(0, 0, 0, 0.765)), url('./images//hero_background.webp'); background-position: 80% 10%; background-size: cover;">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Powering the Future of Payments, Today</h1>
+                <p class="text-lg mb-8">Ready to streamline your payment processes and boost your bottom line? Look no further than Solara – your ultimate partner for seamless payment solutions!</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                    <a href="#how-it-works" class="bg-solara-blue text-white py-3 px-6 rounded-md font-medium text-center hover:bg-blue-600 transition hover-lift">See How It Works</a>
+                    <a href="#cost-analysis" class="border-2 border-white text-white py-3 px-6 rounded-md font-medium text-center hover:bg-white hover:text-solara-blue transition black-txt hover-lift">Free Cost Analysis</a>
+                </div>
+            </div>
+            <div class="md:w-2/5 hover-lift">
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-credit-card text-solara-blue"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-800 font-medium">Save on processing costs</h3>
+                            <p class="text-gray-600 text-sm">Most clients save 10-30%</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-shield-alt text-solara-blue"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-800 font-medium">Risk-free guarantee</h3>
+                            <p class="text-gray-600 text-sm">We pay you if we can't save you money</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="text-sm font-semibold text-solara-blue uppercase tracking-wider">ABOUT US</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Why Solara Payments?</h2>
+                <p class="text-xl text-gray-600">Discover our unique edge</p>
+            </div>
+            <div class="text-center mb-12">
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    At Solara Payments, we're not just another merchant services provider—we're your <strong>partner in profitability and impact</strong>
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center hover-lift bl-top-transition">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-money-bill-wave text-2xl text-solara-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Transparent Pricing, Maximum Savings</h3>
+                    <p class="text-gray-600 text-center">We offer fair, transparent pricing with no hidden fees, ensuring you keep more of your hard-earned money. With our cost-saving models, you maximize your profits without unexpected surprises.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center hover-lift bl-top-transition">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-2xl text-solara-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Hands-On Support</h3>
+                    <p class="text-gray-600 text-center">With dedicated, 24/7 support, we're always here to help, so you're never in the dark. Whether you need quick assistance or long-term guidance, we're just a call away. Our team works proactively to keep your business running smoothly.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center hover-lift bl-top-transition">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hands-helping text-2xl text-solara-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Making a Difference, Together</h3>
+                    <p class="text-gray-600 text-center">A portion of our profits goes directly to charity, letting your business be part of something bigger. When you choose Solara, you aren't just choosing a processor you're choosing to make a difference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <div class="text-center mb-8">
+            <h3 class="text-xl font-semibold text-gray-700 uppercase">SEAMLESS INTEGRATION</h3>
+            <p class="text-gray-600 mt-2">Works with your favorite platforms and software</p>
+        </div>
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            <div class="grayscale hover:grayscale-0 transition-all w-32 h-20 flex items-center justify-center">
+                <img src="./images/woocommerce.webp" alt="Woocommerce" class="max-h-8 max-w-full scale-img" loading="lazy">
+            </div>
+            <div class="grayscale hover:grayscale-0 transition-all w-32 h-20 flex items-center justify-center">
+                <img src="./images/odoo_logo.webp" alt="Odoo" class="max-h-9 max-w-full scale-img" loading="lazy">
+            </div>
+            <div class="grayscale hover:grayscale-0 transition-all w-32 h-20 flex items-center justify-center">
+                <img src="./images//clover_logo.webp" alt="Clover" class="max-h-26 max-w-full scale-img" loading="lazy">
+            </div>
+            <div class="grayscale hover:grayscale-0 transition-all w-32 h-20 flex items-center justify-center">
+                <img src="./images//shopify_logo.webp" alt="Shopify" class="max-h-26 max-w-full scale-img" loading="lazy">
+            </div>
+            <div class="grayscale hover:grayscale-0 transition-all w-32 h-20 flex items-center justify-center">
+                <img src="./images//swipesimple_logo.webp" alt="SwipeSimple" class="max-h-26 max-w-full scale-img" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="how-it-works" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="text-sm font-semibold text-solara-blue uppercase tracking-wider">QUICK START GUIDE</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">6-step success: Your processing roadmap</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    We've developed a simple yet powerful six-step process designed to help you seamlessly switch providers and start saving—without the headaches or confusion.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-solara-blue hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-9 h-9 aspect-square flex-shrink-0 bg-solara-blue text-white rounded-full flex items-center justify-center mr-3 font-bold">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold">Quick, No-Pressure Consultation</h3>
+                    </div>
+                    <p class="text-gray-600">We take the time to understand your business, current processing setup, and goals. No sales pitch—just honest insights on how we can help you save.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-solara-blue hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-9 h-9 aspect-square flex-shrink-0 bg-solara-blue text-white rounded-full flex items-center justify-center mr-3 font-bold">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold">Transparent Cost Comparison</h3>
+                    </div>
+                    <p class="text-gray-600">We break down your current fees versus what you'd pay with Solara. No hidden costs, no fine print—just clear, side-by-side savings.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-solara-blue hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-9 h-9 aspect-square flex-shrink-0 bg-solara-blue text-white rounded-full flex items-center justify-center mr-3 font-bold">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold">Simple, Seamless Signup</h3>
+                    </div>
+                    <p class="text-gray-600">Once you're ready, we handle all the paperwork and approvals. Our onboarding team ensures a smooth transition with zero downtime.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-solara-blue hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-9 h-9 aspect-square flex-shrink-0 bg-solara-blue text-white rounded-full flex items-center justify-center mr-3 font-bold">
+                            04
+                        </div>
+                        <h3 class="text-xl font-bold">Fast & Easy Equipment Setup</h3>
+                    </div>
+                    <p class="text-gray-600">Whether you need new hardware or just a software update, we'll set up your processing system quickly, making sure it runs flawlessly.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-solara-blue hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-9 h-9 aspect-square flex-shrink-0 bg-solara-blue text-white rounded-full flex items-center justify-center mr-3 font-bold">
+                            05
+                        </div>
+                        <h3 class="text-xl font-bold">24/7 Hands-On Support</h3>
+                    </div>
+                    <p class="text-gray-600">We're always here to help. Whether it's a quick question or an urgent need, our support team is just a call or message away.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-solara-blue hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-9 h-9 aspect-square flex-shrink-0 bg-solara-blue text-white rounded-full flex items-center justify-center mr-3 font-bold">
+                            06
+                        </div>
+                        <h3 class="text-xl font-bold">More Savings, More Growth</h3>
+                    </div>
+                    <p class="text-gray-600">With lower processing costs and no surprises, you keep more of your revenue. Plus, as your business grows, we ensure your processing stays optimized.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="pricing" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <div class="text-center mb-12">
+            <span class="text-sm font-semibold text-solara-blue uppercase tracking-wider">PRICING STRUCTURES</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Simple Pricing, Maximum Savings</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+                We offer three powerful pricing models that will be customized to beat your current rate and setup, designed to fit your business needs whether you want to eliminate processing fees, keep costs predictable, or get the lowest possible rates.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bl-top-transition dualPricing bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col hover-lift">
+                <div class="flex items-center mb-6">
+                    <h3 class="text-2xl font-bold">Dual Pricing</h3>
+                    <div class="ml-auto">
+                        <span class="bg-blue-100 text-solara-blue text-sm font-medium py-1 px-3 rounded-full inline-block">Best Choice</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 mb-8 flex-grow">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Pass processing costs to customers, pay $0 in fees</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Customers see both cash and card prices upfront</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Earn extra revenue with our profit-sharing program</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Maximize profits and reduce unnecessary expenses</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Perfect for businesses looking to save thousands</span>
+                    </li>
+                </ul>
+                <a href="#cost-analysis" class="block w-full bg-solara-blue text-white text-center py-3 rounded-md font-medium hover:bg-blue-600 transition">Get Started with Dual Pricing</a>
+            </div>
+            <div class="bl-top-transition flatRate bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col hover-lift">
+                <h3 class="text-2xl font-bold mb-6">Flat Rate Pricing</h3>
+                <ul class="space-y-3 mb-8 flex-grow">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Predictable percentage + flat per-transaction cost</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>No hidden fees—just simple, straightforward pricing</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Ideal for businesses that prefer consistent costs</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Great for businesses with predictable transaction volume</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Easy budgeting with no rate fluctuations</span>
+                    </li>
+                </ul>
+                <a href="#cost-analysis" class="block w-full bg-solara-blue text-white text-center py-3 rounded-md font-medium hover:bg-blue-600 transition">Get Started with Flat Rate</a>
+            </div>
+            <div class="bl-top-transition interchange bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col hover-lift">
+                <div class="flex items-center mb-6">
+                    <h3 class="text-2xl font-bold">Interchange+</h3>
+                    <div class="ml-auto">
+                        <span class="bg-green-100 text-green-700 text-sm font-medium py-1 px-3 rounded-full inline-block">Best Rates</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 mb-8 flex-grow">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Direct wholesale rates + small markup</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Full transparency into all processing costs</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Lowest overall cost for qualifying businesses</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Perfect for businesses processing $250k+ monthly</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-solara-blue mt-1 mr-3"></i>
+                        <span>Access to detailed reporting and cost analysis</span>
+                    </li>
+                </ul>
+                <a href="#cost-analysis" class="block w-full bg-solara-blue text-white text-center py-3 rounded-md font-medium hover:bg-blue-600 transition">See If You Qualify</a>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="py-16 bg-solara-pattern" style="background: url('./images//Slide-7.webp'); background-size: cover; background-position: center;">
+        <div class="analysis-bt container mx-auto px-4 max-w-3xl">
+            <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 text-center text-white hover-lift" style= "background: linear-gradient(rgb(0, 0, 0, 0.600), rgba(0, 0, 0, 0.600));">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">"We Pay You" Risk-Free Guarantee Switch</h2>
+                <p class="text-lg mb-6">
+                    Switch to Solara Payment Solutions, and we'll pay you to make the switch. Plus, if we can't save you money, we'll pay you anyway. No risk, just more profit.
+                </p>
+                <ul class="space-y-2 mb-8 max-w-md mx-auto text-left">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-white mt-1 mr-3"></i>
+                        <span>We cover your switch cost—<strong>you get paid</strong> just to try us</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-white mt-1 mr-3"></i>
+                        <span>If you don't save money, <strong>we pay you</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-white mt-1 mr-3"></i>
+                        <span>If you do save (you will), <strong>you keep more profit—forever</strong></span>
+                    </li>
+                </ul>
+                <a href="#cost-analysis" class="hoverWhiteOutline inline-block bg-solara-blue text-white py-3 px-8 rounded-md font-bold transition">Claim Your Savings Now</a>
+            </div>
+        </div>
+    </section>
+    <section id="cost-analysis" class="py-16 bg-blue-700" style="background: linear-gradient(135deg, #26baf9, #004d9a);">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-10 text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">No Call, No Pressure Cost Analysis</h2>
+                <p class="text-xl">Fill out the Form and We'll email & text you a free, savings analysis report</p>
+                <p class="text-xl">If you are cash only please just respond N/A in the corresponding boxes</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-xl p-8 hover-lift">
+                <form name="cost-analysis" class="grid md:grid-cols-2 gap-6" method="POST" netlify>
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-medium" for="company">Company Name</label>
+                        <input name="company_name" type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Solara Payment Solutions" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-medium" for="phone_number">Phone Number</label>
+                        <input name="phone_number" type="tel" id="phone_number" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="888-240-6449" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-medium" for="email">Email</label>
+                        <input name="email" type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="support@solarapayments.com" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-medium" for="gross_monthly_revenue">Gross Monthly Revenue</label>
+                        <input name="gross_monthly_revenue" type="text" id="gross_monthly_revenue" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="30,000" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-medium" for="current_rate">Current Rate (If Known)</label>
+                        <input name="current_rate" type="text" id="current_rate" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2.7% + 0.10 Cents" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-medium" for="current_equipment">Equipment Used (If Known)</label>
+                        <input name="current_equipment" type="text" id="current_equipment" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Curv POS + Pax A920 Terminal" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-medium" for="fees_paid">Monthly Fees Paid</label>
+                        <input name="fees_paid" type="text" id="fees_paid" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="960" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-medium" for="trans_per_month">Transactions Per Month</label>
+                        <input name="trans_per_month" type="text" id="trans_per_month" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1500" required>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 mb-2 font-medium" for="avg_trans_amt">Average Transaction Amount</label>
+                        <input name="avg_trans_amt" type="text" id="avg_trans_amt" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="20" required>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 mb-2 font-medium" for="comments">Comments</label>
+                        <input name="comments" type="text" id="comments" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Got specific questions or something you'd like us to know about your business? Drop it here!">
+                    </div>
+                    <div class="md:col-span-2">
+                        <button type="submit" class="w-full bg-solara-blue text-white font-bold py-4 px-6 rounded-md transition">Get Your Free Cost Analysis Today</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer id="contact" class="bg-solara-dark text-white pt-12 pb-6">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="./images//footer_logo.webp" width="150px" loading="lazy" alt="Solara Main Logo Footer">
+                    </div>
+                    <p class="text-gray-400 mb-4">Powering the Future of Payments, Today</p>
+                    <p class="text-gray-400 mb-4">Rise Above Hidden Fees: Choose Solara Payment Solutions for Transparent, Seamless Transactions. Don't Settle for Easy – Opt for Excellence in Every Payment</p>
+                </div>
+                <div class="quickLinks">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./solutions.html" class="text-gray-400 hover:text-white transition">Solutions</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition">How It Works</a></li>
+                        <li><a href="./commitment.html" class="text-gray-400 hover:text-white transition">Our Commitment to Giving Back</a></li>
+                        <li><a href="./partnerships.html" class="text-gray-400 hover:text-white transition">Partnerships</a></li>
+                        <li><a href="./privacy-policy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="./terms-conditions.html" class="text-gray-400 hover:text-white transition">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Get updated</h3>
+                    <p class="text-gray-400 mb-4">Stay ahead on future payment solutions with us!</p>
+                    <form class="flex">
+                        <input type="email" placeholder="your@email.com" class="px-4 py-2 bg-gray-800 text-white rounded-l-md focus:outline-none flex-1">
+                        <button type="submit" class="bg-solara-blue px-4 py-2 rounded-r-md font-medium hover:bg-blue-600 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 Solara Payments. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/profile.php?id=61569141006130" class="text-gray-500 hover:text-solara-blue hover:text-white transition" alt="Go to facebook"><i class="fab fa-facebook-f" alt="facebook logo"></i></a>
+                    <a href="https://www.instagram.com/solarapayments" class="text-gray-500 hover:text-solara-blue hover:text-white transition" alt="Go to instagram"><i class="fab fa-instagram" alt="instagram logo"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loginModal" class="fixed inset-0 z-50 bg-black bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg w-96 max-w-full p-6 relative" onclick="event.stopPropagation()">
+            <button onclick="toggleLoginModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-xl">&times;</button>
+            <h2 class="text-xl font-semibold mb-4 text-center">Solara Login</h2>
+            <div id="loginForm" class="flex flex-col space-y-4">
+                <input type="email" id="email1" placeholder="Email" class="border rounded-md p-2" required>
+                <input type="password" id="password" placeholder="Password" class="border rounded-md p-2" required>
+                <button id="loginButton" class="bg-solara-blue text-white text-center py-3 rounded-md font-medium hover:bg-blue-600 transition hover-lift">Sign In</button>
+                <p id="loginMessage" class="text-center text-sm"></p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-200">
+                <h3 class="text-md font-semibold mb-2 text-center">Other Login Options</h3>
+                <div class="flex flex-col space-y-4">
+                    <a href="https://dashboard.payarc.net/signin" class="bg-solara-blue text-white text-center py-3 rounded-md font-medium hover:bg-blue-600 transition hover-lift">Merchant Dashboard</a>
+                    <a href="https://www.curvpos.net/account/login?AspxAutoDetectCookieSupport=1" class="bg-purple-600 text-white text-center py-3 rounded-md font-medium transition hover-lift">Curv Login</a>
+                </div>
+            </div>
+        </div>
+    </div>     
+    <div class="floating-calendly-bubble animate__animated animate__bounceIn mobile-bounce" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sali-solarapayments/30min'});return false;">
+        <i class="fas fa-calendar-alt mobile-bounce"></i>
+        <span class="bubble-text">5 Minutes. Better Rates. No BS</span>
+    </div>
+</body>
+</html>

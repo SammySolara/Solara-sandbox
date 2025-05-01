@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+        #usernameDisplay {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        #merchantList {
+            font-size: 1rem;
+            max-width: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="usernameDisplay">Loading...</div>
+    <div id="merchantList">Loading merchants...</div>
+
+    <!-- External JS that handles dashboard logic -->
+    <script src="./functions/dashboard.js"></script>
+    <script>
+        const user = JSON.parse(localStorage.getItem('solaraUser'));
+        const usernameDisplay = document.getElementById('usernameDisplay');
+        if (user && user.email) {
+            usernameDisplay.textContent = user.email.split('@')[0];
+        } else {
+            usernameDisplay.textContent = 'User not found';
+        }
+    </script>
+</body>
+</html>
+
+
